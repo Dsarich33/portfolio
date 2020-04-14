@@ -1,13 +1,24 @@
-import React from 'react';
-import Home from './components/';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import './App.css';
+import React from "react";
+import Home from "./components/Home";
+import Resume from "./components/Resume";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
     <>
       <CssBaseline />
-      <Home />
+      <Router>
+        <Switch>
+          <Route path="/resume">
+            <Resume />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 }

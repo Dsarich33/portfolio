@@ -1,7 +1,34 @@
+/* 
+Color theme 
+Red: #B52706
+Green: #198474
+Yellow: #DBAD4A
+Black: #1B120F
+Grey: #443E51
+*/
+
 body {
-  background: url(lights.jpg) no-repeat center center fixed;
-  -webkit-background: cover;
-  -moz-background: cover;
-  -o-background: cover;
-  background: cover;
+  background: url(background.jpg) no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.typedContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  text-align: center;
+  z-index: 1;
 }
