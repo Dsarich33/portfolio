@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import Navbar from "./Navbar";
 
 export class Resume extends Component {
   render() {
-    return <div>Resume</div>;
+    return (
+      <>
+      <Navbar />
+      </>
+    );
   }
 }
 

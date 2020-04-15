@@ -6,29 +6,55 @@ Yellow: #DBAD4A
 Black: #1B120F
 Grey: #443E51
 */
-
-body {
-  background: url(background.jpg) no-repeat fixed center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+    font-family: 'Roboto', monospace !important;
 }
-body:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.65);
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+html,
+body {
+    background: #253237; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right bottom, #253237, #010202); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right bottom, #253237, #010202); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 3000px;
+    width: 100%;
 }
 .typedContainer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100vw;
-  text-align: center;
-  z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    text-align: center;
+    z-index: 1;
+}
+.navDrawer {
+    overflow-x: hidden;
+}
+.avatarContainer {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.avatar {
+    display: block;
+    text-align: center;
+    margin: 0.5rem auto;
+}
+.htmlTag {
+    color: #e72b5f;
+}
+.htmlTag.open:before {
+    content: ' <';
+    color: #fff;
+}
+.htmlTag.open:after {
+    content: '> ';
+    color: #fff;
+}
+.htmlTag.closed:before {
+    content: ' </';
+    color: #fff;
+}
+.htmlTag.closed:after {
+    content: '> ';
+    color: #fff;
 }
