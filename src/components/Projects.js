@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '10px auto',
     },
     subTitle: {
-        color: '#fff',
+        color: '#dbad4a',
         marginBottom: '3rem',
     },
     socialButton: {
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '36px',
         transition: 'all 250ms ease-in-out',
         '&:hover': {
-            color: '#676767',
+            color: '#dbad4a',
         },
     },
 }));
