@@ -1,110 +1,69 @@
 import React from 'react';
 import avatar from '../avatar.png';
 import Typed from 'react-typed';
+import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import { Typography, Avatar, Box } from '@material-ui/core';
 import { GitHub, LinkedIn } from '@material-ui/icons';
-import { motion } from 'framer-motion';
-import { ParallaxBanner } from 'react-scroll-parallax';
 
 const useStyles = makeStyles((theme) => ({
     avatar: {
         width: theme.spacing(15),
         height: theme.spacing(15),
-        margin: theme.spacing(1),
+        margin: '10px auto',
     },
     subTitle: {
         color: '#fff',
         marginBottom: '3rem',
     },
-    typedContainer: {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: '100vw',
-        textAlign: 'center',
-        zIndex: 1,
+    title: {
+        color: '#dbad4a',
+        marginBottom: '1.5rem',
     },
-    ghButton: {
-        marginRight: '10px',
+    socialButton: {
         color: '#fff',
-    },
-    linkedInButton: {
-        color: '#fff',
-    },
-}));
-
-const container = {
-    hidden: { opacity: 1, scale: 0 },
-    visible: {
-        opacity: 1,
-        scale: 1,
-        transition: {
-            delay: 0.3,
-            when: 'beforeChildren',
-            staggerChildren: 0.1,
+        fontSize: '36px',
+        transition: 'all 250ms ease-in-out',
+        '&:hover': {
+            color: '#676767',
         },
     },
-};
-
-const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-        y: 0,
-        opacity: 1,
-    },
-};
+}));
 
 const Header = () => {
     const classes = useStyles();
     return (
-        <ParallaxBanner
-            layers={[
-                {
-                    image: 'stars.svg',
-                    amount: 0.2,
-                },
-            ]}
-            style={{
-                height: '100vh',
-            }}
-        >
-            <motion.div className='homeContainer' variants={container} initial='hidden' animate='visible'>
+        <>
+            <Container maxWidth='lg'>
                 <Box className='typedContainer'>
-                    <motion.div key='0' variants={item} className='avatarContainer'>
-                        <Avatar src={avatar} alt='Dan Sarich' className={classes.avatar} />
-                    </motion.div>
+                    <Avatar src={avatar} alt='Dan Sarich' className={classes.avatar} />
 
-                    <motion.div key='1' variants={item}>
-                        <Typography className={classes.subTitle} variant='h3'>
-                            <Typed strings={["Hello, I'm Dan Sarich"]} typeSpeed={100} />
-                        </Typography>
-                    </motion.div>
-                    <motion.div key='2' variants={item}>
-                        <Typography className={classes.subTitle} variant='h5'>
-                            Front End Web Developer & Designer for V.A.I. with an emphasis on JavaScript/jQuery, CSS, HTML, JSP/Java.
-                            <br />
-                            Focusing on development and integration with modern technologies such as React, Vue.js, Node & SASS.
-                        </Typography>
-                    </motion.div>
+                    <Typography className={classes.title} variant='h3'>
+                        <Typed strings={["Hello, I'm Dan Sarich"]} typeSpeed={100} />
+                    </Typography>
+                    <Typography className={classes.subTitle} variant='h6'>
+                        Front-End Developer & Web Designer
+                    </Typography>
+
+                    {/* <Typography className={classes.subTitle} variant='h5'>
+                        Intrigue and curiosity has taken me down the tech rabbit hole beginning at a very early age. I started my first professional career in 2014 as a UI Developer / Designer, quickly i realized my aptitude for web development and took action! Through persistence and hard work i was quickly promoted to Front End Web Developer.
+                        <br />
+                        <br />
+                        Currently a Front End Web Developer for V.A.I. with an emphasis on JavaScript/jQuery, CSS, HTML, JSP/Java. Driving development and integration with modern technologies such as Vue.js, Node & SASS.
+                    </Typography> */}
 
                     <Box className='ghLink'>
-                        <motion.span key='3' variants={item}>
-                            <IconButton className={classes.ghButton} onClick={() => window.open('https://github.com/Dsarich33')}>
-                                <GitHub />
-                            </IconButton>
-                        </motion.span>
-                        <motion.span key='4' variants={item}>
-                            <IconButton className={classes.linkedInButton} onClick={() => window.open('https://www.linkedin.com/in/daniel-sarich/')}>
-                                <LinkedIn />
-                            </IconButton>
-                        </motion.span>
+                        <IconButton className={classes.socialButton} onClick={() => window.open('https://github.com/Dsarich33')}>
+                            <GitHub fontSize='inherit' />
+                        </IconButton>
+                        <IconButton className={classes.socialButton} onClick={() => window.open('https://www.linkedin.com/in/daniel-sarich/')}>
+                            <LinkedIn fontSize='inherit' />
+                        </IconButton>
                     </Box>
                 </Box>
-            </motion.div>
-        </ParallaxBanner>
+            </Container>
+        </>
     );
 };
 

@@ -1,21 +1,33 @@
 import React from 'react';
+import Projects from './components/Projects';
+import About from './components/About';
+import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
 import Home from './components/Home';
-import Resume from './components/Resume';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
+
+import './styles/app.css';
+
+const theme = createMuiTheme();
+const rtheme = responsiveFontSizes(theme);
 
 function App() {
     return (
         <>
-            <CssBaseline />
-            <Router>
-                <Switch>
-                    <Route path='/'>
-                        <Home />
-                    </Route>
-                </Switch>
-            </Router>
+            <ThemeProvider theme={rtheme}>
+                <Router>
+                    <Switch>
+                        <Route exact path='/'>
+                            <Home />
+                        </Route>
+                        <Route path='/projects'>
+                            <Projects />
+                        </Route>
+                        <Route path='/about'>
+                            <About />
+                        </Route>
+                    </Switch>
+                </Router>
+            </ThemeProvider>
         </>
     );
 }

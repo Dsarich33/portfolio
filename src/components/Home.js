@@ -1,21 +1,17 @@
 import React from 'react';
 import Header from './Header';
-import Particles from 'react-particles-js';
-import { makeStyles } from '@material-ui/core/styles';
+import Navbar from './Navbar';
 
-const useStyles = makeStyles((theme) => ({
-    particlesCanva: {
-        position: 'absolute',
-    },
-}));
-
-const Home = () => {
-    const classes = useStyles();
-    return (
-        <>
-            <Header />
-        </>
-    );
-};
+class Home extends React.Component {
+    render() {
+        return (
+            <>
+                <div class='hero'></div>
+                <Navbar />
+                <Header />
+            </>
+        );
+    }
+}
 
 export default Home;
