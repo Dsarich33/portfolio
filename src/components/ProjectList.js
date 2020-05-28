@@ -1,5 +1,4 @@
 import React from 'react';
-import { Icon } from 'react-materialize';
 
 function ProjectList() {
     return (
@@ -8,7 +7,7 @@ function ProjectList() {
                 <div className='col s12 m12 l6'>
                     <div className='card horizontal'>
                         <div className='card-image'>
-                            <img src='/images/css-512.png' />
+                            <img src='/images/css-512.png' alt='cardImage' />
                         </div>
                         <div className='card-stacked'>
                             <div className='card-content'>
@@ -26,7 +25,7 @@ function ProjectList() {
                 <div className='col s12 m12 l6'>
                     <div className='card horizontal'>
                         <div className='card-image'>
-                            <img src='/images/css-512.png' />
+                            <img src='/images/css-512.png' alt='cardImage' />
                         </div>
                         <div className='card-stacked'>
                             <div className='card-content'>
@@ -44,7 +43,7 @@ function ProjectList() {
                 <div className='col s12 m12 l6'>
                     <div className='card horizontal'>
                         <div className='card-image'>
-                            <img src='/images/css-512.png' />
+                            <img src='/images/css-512.png' alt='cardImage' />
                         </div>
                         <div className='card-stacked'>
                             <div className='card-content'>
@@ -62,7 +61,7 @@ function ProjectList() {
                 <div className='col s12 m12 l6'>
                     <div className='card horizontal'>
                         <div className='card-image'>
-                            <img src='/images/css-512.png' />
+                            <img src='/images/css-512.png' alt='cardImage' />
                         </div>
                         <div className='card-stacked'>
                             <div className='card-content'>
@@ -80,7 +79,7 @@ function ProjectList() {
                 <div className='col s12 m12 l6'>
                     <div className='card horizontal'>
                         <div className='card-image'>
-                            <img src='/images/css-512.png' />
+                            <img src='/images/css-512.png' alt='cardImage' />
                         </div>
                         <div className='card-stacked'>
                             <div className='card-content'>

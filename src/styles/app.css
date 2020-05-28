@@ -83,11 +83,6 @@ em {
 .siteNav .navLink:hover:before {
     transform: scale(1);
 }
-@media only screen and (max-width: 600px) {
-    nav .container {
-        width: 100%;
-    }
-}
 
 /************** Projects **************/
 
@@ -129,4 +124,13 @@ em {
 .contact,
 .contact a {
     color: #29a2ce;
+}
+
+@media only screen and (max-width: 600px) {
+    nav .container {
+        width: 100%;
+    }
+    .card .card-content {
+        height: 215px;
+    }
 }

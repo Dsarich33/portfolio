@@ -19,21 +19,26 @@ class App extends React.Component {
         M.Sidenav.init(sidenav, {});
     }
     render() {
+        const closeSideNav = () => {
+            const elm = document.querySelector('#slide-out');
+            const instance = M.Sidenav.getInstance(elm);
+            instance.close();
+        };
         return (
             <>
                 <ThemeProvider theme={rtheme}>
                     <Router>
                         <Switch>
                             <Route exact path='/'>
-                                <MobileSideNav />
+                                <MobileSideNav closeSideNav={closeSideNav} />
                                 <Home />
                             </Route>
                             <Route path='/projects'>
-                                <MobileSideNav />
+                                <MobileSideNav closeSideNav={closeSideNav} />
                                 <Projects />
                             </Route>
                             <Route path='/about'>
-                                <MobileSideNav />
+                                <MobileSideNav closeSideNav={closeSideNav} />
                                 <About />
                             </Route>
                         </Switch>

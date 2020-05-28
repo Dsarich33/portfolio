@@ -11,7 +11,7 @@ const Navbar = () => {
                             <i class='material-icons'>menu</i>
                         </a>
                         <NavLink to='/' className='brand-logo'>
-                            DAN SARICH <em>.tech</em>
+                            DS<em>.tech</em>
                         </NavLink>
                         <ul className='right hide-on-med-and-down'>
                             <li>
