@@ -17,7 +17,7 @@ const Projects = ({ photos }) => {
     };
     return (
         <>
-            <Gallery photos={photos} onClick={openLightbox} direction={'column'} />
+            <Gallery photos={photos} onClick={openLightbox} direction={'column'} columns={4} />
             <ModalGateway>
                 {viewerIsOpen ? (
                     <Modal onClose={closeLightbox}>

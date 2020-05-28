@@ -6,116 +6,127 @@ Yellow: #DBAD4A
 Black: #1B120F
 Grey: #443E51
 */
-html,
+
 body {
-	background: #212121; /* fallback for old browsers */
-	font-family: Helvetica, monospace !important;
-	width: 100%;
-	height: 100%;
+    background: #212121;
+    font-family: 'Roboto', sans-serif !important;
 }
 em {
-	color: #dbad4a;
+    color: #29a2ce;
 }
-.hero {
-	background-image: linear-gradient(#212121dd, #212121dd), url(/images/hero.jpg);
-	background-size: cover;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 1;
-}
+
 .typedContainer {
-	position: absolute;
-	top: 50%;
-	right: 0;
-	left: 0;
-	transform: translateY(-50%);
-	height: auto;
-	text-align: center;
-	z-index: 999;
-	clear: both;
-	box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    transform: translateY(-50%);
+    height: auto;
+    text-align: center;
+    clear: both;
+    box-sizing: border-box;
 }
 .avatarContainer {
-	display: inline-block;
-	margin-bottom: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 .avatar {
-	display: block;
-	text-align: center;
-	margin: 0.5rem auto;
+    display: block;
+    text-align: center;
+    margin: 0.5rem auto;
 }
 
 /************** Nav Bar **************/
 .siteNav {
-	background-color: #333333;
-	box-shadow: #00000055 0px 3px 5px;
-	position: relative;
-	z-index: 2;
+    background-color: #333333;
+    box-shadow: #00000055 0px 3px 5px;
 }
 .siteNav .linkContainer {
-	position: relative;
-	padding: 20px 0px;
-	color: #fff;
-	text-align: right;
+    position: relative;
+    color: #fff;
+    text-align: right;
 }
 .siteNav .navLink {
-	color: #fff;
-	font-size: 1.1em;
-	text-decoration: none;
-	padding: 10px 0px;
-	margin: 0 15px;
-	box-sizing: border-box;
-	border-bottom: 2px solid transparent;
-	transition: all 0.25s linear;
-	position: relative;
+    color: #fff;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding: 10px 0px;
+    margin: 0 15px;
+    box-sizing: border-box;
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s linear;
+    position: relative;
 }
 .siteNav .navLink.logo {
-	position: absolute;
-	left: 0;
-	top: 0;
-	font-size: 1.5em;
-	padding: 14px 0px;
-	margin-left: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5em;
+    margin-left: 0;
 }
 .siteNav .navLink.logo:before {
-	display: none;
+    display: none;
 }
 .siteNav .navLink:before {
-	content: '';
-	display: block;
-	width: 100%;
-	height: 2px;
-	background-color: #fff;
-	position: absolute;
-	left: 0;
-	bottom: -3px;
-	transform-origin: left;
-	transform: scale(0);
-	transition: 0.25s linear;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transform-origin: left;
+    transform: scale(0);
+    transition: 0.25s linear;
 }
 .siteNav .navLink:hover:before {
-	transform: scale(1);
+    transform: scale(1);
+}
+@media only screen and (max-width: 600px) {
+    nav .container {
+        width: 100%;
+    }
 }
 
 /************** Projects **************/
 
 .projectsContainer {
-	color: #fff;
-	margin-top: 30px;
-	line-height: 22px;
-	letter-spacing: 1.5px;
+    color: #fff;
+    margin-top: 30px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
 }
 .projectsContainer .project {
-	margin-top: 20px;
+    margin-top: 20px;
 }
-.projectsContainer .projectTitle {
-	color: #dbad4a;
-	font-size: 30px;
-	padding-bottom: 5px;
+.projectTitle {
+    color: #29a2ce;
 }
 .linksContainer {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.card-image {
+    width: 100px;
+    padding: 10% 10px;
+    min-width: 100px;
+}
+
+.card {
+    background-color: #333;
+    color: #fff;
+}
+.card .card-content {
+    height: 175px;
+}
+
+/************** About **************/
+
+.contact {
+    margin-top: 40px;
+}
+.contact,
+.contact a {
+    color: #29a2ce;
 }

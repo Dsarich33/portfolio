@@ -1,28 +1,38 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <>
-            <nav className='siteNav'>
-                <Container maxWidth='lg'>
-                    <div className='linkContainer'>
-                        <NavLink to='/' className='navLink logo'>
+            <div class='navbar-fixed'>
+                <nav className='siteNav'>
+                    <div className='nav-wrapper container'>
+                        <a href='#!' data-target='slide-out' class='sidenav-trigger show-on-med-and-down'>
+                            <i class='material-icons'>menu</i>
+                        </a>
+                        <NavLink to='/' className='brand-logo'>
                             DAN SARICH <em>.tech</em>
                         </NavLink>
-                        <NavLink to='/' className='navLink'>
-                            Home
-                        </NavLink>
-                        <NavLink to='/about' className='navLink'>
-                            About
-                        </NavLink>
-                        <NavLink to='/projects' className='navLink'>
-                            Projects
-                        </NavLink>
+                        <ul className='right hide-on-med-and-down'>
+                            <li>
+                                <NavLink to='/' className=''>
+                                    Home
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to='/about' className=''>
+                                    About
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to='/projects' className=''>
+                                    Projects
+                                </NavLink>
+                            </li>
+                        </ul>
                     </div>
-                </Container>
-            </nav>
+                </nav>
+            </div>
         </>
     );
 };

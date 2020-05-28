@@ -1,7 +1,6 @@
 import React from 'react';
 import avatar from '../avatar.png';
 import Typed from 'react-typed';
-import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import { Typography, Avatar, Box } from '@material-ui/core';
@@ -18,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '3rem',
     },
     title: {
-        color: '#dbad4a',
+        color: '#29a2ce',
         marginBottom: '1.5rem',
     },
     socialButton: {
@@ -35,7 +34,7 @@ const Header = () => {
     const classes = useStyles();
     return (
         <>
-            <Container maxWidth='lg'>
+            <div className='container'>
                 <Box className='typedContainer'>
                     <Avatar src={avatar} alt='Dan Sarich' className={classes.avatar} />
 
@@ -46,13 +45,6 @@ const Header = () => {
                         Front-End Developer & Web Designer
                     </Typography>
 
-                    {/* <Typography className={classes.subTitle} variant='h5'>
-                        Intrigue and curiosity has taken me down the tech rabbit hole beginning at a very early age. I started my first professional career in 2014 as a UI Developer / Designer, quickly i realized my aptitude for web development and took action! Through persistence and hard work i was quickly promoted to Front End Web Developer.
-                        <br />
-                        <br />
-                        Currently a Front End Web Developer for V.A.I. with an emphasis on JavaScript/jQuery, CSS, HTML, JSP/Java. Driving development and integration with modern technologies such as Vue.js, Node & SASS.
-                    </Typography> */}
-
                     <Box className='ghLink'>
                         <IconButton className={classes.socialButton} onClick={() => window.open('https://github.com/Dsarich33')}>
                             <GitHub fontSize='inherit' />
@@ -62,7 +54,7 @@ const Header = () => {
                         </IconButton>
                     </Box>
                 </Box>
-            </Container>
+            </div>
         </>
     );
 };
